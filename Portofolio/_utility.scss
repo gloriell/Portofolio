@@ -1,0 +1,131 @@
+.header {
+  &__container {
+    max-width: $website-width;
+    padding: 1.5rem;
+    margin: auto;
+    overflow: hidden;
+  }
+}
+
+.container{
+  max-width: $website-width;
+  padding: 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+//buttons
+%btn__shared {
+  display: inline-block;
+  padding: 0.8rem;
+  transition: all 0.5s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  &__main {
+    @extend %btn__shared;
+    color: #333;
+    background-color: $main-color;
+  }
+  &__light {
+    @extend %btn__shared;
+    color: #333;
+    background-color: $light-color;
+  }
+  &__dark {
+    @extend %btn__shared;
+    color: #333;
+    background-color: $dark-color;
+  }
+}
+
+.bg {
+  &-main {
+    background-color: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background-color: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background-color: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+.header__description {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+button[class^="btn__"]:hover,
+a[class^="btn__"]:hover,
+input[class^="btn__"]:hover {
+  background-color: $main-color;
+}
+
+//padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+//margins
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background-color: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
