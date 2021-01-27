@@ -6,6 +6,10 @@
     .header__content {
       padding-top: 5rem;
     }
+
+    .header__content h1 {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -13,11 +17,25 @@
 
 @media (max-width: 500px) {
   .header__nav {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 
-    li {
-      padding: 1rem;
+    li a {
+      display: none;
+    }
+    .burger {
+      display: flex;
+      flex-direction: column;
+      height: 30px;
+      width: 30px;
+      margin-top: 10px;
+
+      &-line {
+        border-top: 2.25px solid #fff;
+        display: block;
+        padding-top: 0.32rem;
+        width: 1.5rem;
+      }
     }
   }
 
@@ -26,10 +44,9 @@
       height: 10rem;
       border-bottom: 3px solid $main-color;
       background-position: 20% 30%;
-
-      header__content {
-        display: none;
-      }
+    }
+    .header__content h1 {
+      font-size: 2rem;
     }
 
     &__inner {
@@ -120,6 +137,7 @@
       flex-direction: column;
       padding: 1rem;
       height: 1rem;
+      height: 100%;
     }
   }
 }
