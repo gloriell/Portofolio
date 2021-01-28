@@ -20,141 +20,154 @@
     flex-direction: row;
     align-items: center;
 
-    li a {
+    .header-links {
       display: none;
     }
     .burger {
+      position: relative;
       display: flex;
       flex-direction: column;
-      height: 30px;
-      width: 30px;
+      height: 30rem;
+      width: 30rem;
       margin-top: 10px;
 
       &-line {
+        position: absolute;
         border-top: 2.25px solid #fff;
         display: block;
         padding-top: 0.32rem;
         width: 1.5rem;
+        top: 2rem;
+        left: 20rem;
       }
-    }
-  }
 
-  header {
-    &__home {
-      height: 10rem;
-      border-bottom: 3px solid $main-color;
-      background-position: 20% 30%;
-    }
-    .header__content h1 {
-      font-size: 2rem;
-    }
-
-    &__inner {
-      height: 10rem;
-    }
-  }
-
-  .home-a .specials,
-  .home-b .stats,
-  .home-c .process,
-  .about-d .testimonials,
-  .contact-b .contact-info,
-  .items {
-    grid-template-columns: 1fr;
-  }
-
-  .home {
-    &-a {
-      .specials div {
-        border-bottom: 1px $light-color solid;
-        padding-bottom: 1rem;
-
-        &:last-child {
-          border: none;
-          padding-bottom: 0;
+      &-menu {
+        height: 30rem;
+        width: 30rem;
+        background-color: red;
+        &-links {
+          display: block;
         }
       }
     }
 
-    &-b {
-      .stats div {
-        padding: 2rem 0 1rem 0;
+    header {
+      &__home {
+        height: 10rem;
+        border-bottom: 3px solid $main-color;
+        background-position: 20% 30%;
       }
-    }
-  }
-
-  .about {
-    &-a {
-      .info {
-        grid-template-areas:
-          "bioimage"
-          "bio"
-          "aw1"
-          "aw2"
-          "aw3";
-      }
-    }
-    &-c {
-      display: none;
-    }
-  }
-
-  .contact {
-    &-a {
-      .text-fields {
-        grid-template-areas:
-          "name"
-          "subject"
-          "email"
-          "phone"
-          "message";
-      }
-    }
-
-    &-b {
-      div {
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid #555;
-
-        &:last-child {
-          border: none;
-          margin-bottom: 0;
-          padding-bottom: 0;
-        }
-      }
-    }
-
-    &-c {
-      font-size: 2rem;
-    }
-  }
-
-  .main-footer {
-    height: 7rem;
-
-    .footer-content {
-      flex-direction: column;
-      padding: 1rem;
-      height: 1rem;
-      height: 100%;
-    }
-  }
-}
-
-@media (max-height: 580px) {
-  .header__home {
-    .header__content {
-      padding-top: 3rem;
-    }
-  }
-}
-
-@media (max-height: 330px) {
-  .header__home {
-    .header__content {
-      h1 {
+      .header__content h1 {
         font-size: 2rem;
+      }
+
+      &__inner {
+        height: 10rem;
+      }
+    }
+
+    .home-a .specials,
+    .home-b .stats,
+    .home-c .process,
+    .about-d .testimonials,
+    .contact-b .contact-info,
+    .items {
+      grid-template-columns: 1fr;
+    }
+
+    .home {
+      &-a {
+        .specials div {
+          border-bottom: 1px $light-color solid;
+          padding-bottom: 1rem;
+
+          &:last-child {
+            border: none;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &-b {
+        .stats div {
+          padding: 2rem 0 1rem 0;
+        }
+      }
+    }
+
+    .about {
+      &-a {
+        .info {
+          grid-template-areas:
+            "bioimage"
+            "bio"
+            "aw1"
+            "aw2"
+            "aw3";
+        }
+      }
+      &-c {
+        display: none;
+      }
+    }
+
+    .contact {
+      &-a {
+        .text-fields {
+          grid-template-areas:
+            "name"
+            "subject"
+            "email"
+            "phone"
+            "message";
+        }
+      }
+
+      &-b {
+        div {
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #555;
+
+          &:last-child {
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &-c {
+        font-size: 2rem;
+      }
+    }
+
+    .main-footer {
+      height: 7rem;
+
+      .footer-content {
+        flex-direction: column;
+        padding: 1rem;
+        height: 1rem;
+        height: 100%;
+      }
+    }
+  }
+
+  @media (max-height: 580px) {
+    .header__home {
+      .header__content {
+        padding-top: 3rem;
+      }
+    }
+  }
+
+  @media (max-height: 330px) {
+    .header__home {
+      .header__content {
+        h1 {
+          font-size: 2rem;
+        }
       }
     }
   }

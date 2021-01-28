@@ -324,6 +324,10 @@ img {
   border-color: #48bfe3;
 }
 
+.header__nav .burger-links {
+  display: none;
+}
+
 .header__home {
   background: url("./img/showcase.jpg") no-repeat center right/cover;
   height: 100vh;
@@ -673,10 +677,11 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header__nav li a {
+  .header__nav .header-links {
     display: none;
   }
   .header__nav .burger {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -684,73 +689,84 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 30px;
-    width: 30px;
+    height: 30rem;
+    width: 30rem;
     margin-top: 10px;
   }
   .header__nav .burger-line {
+    position: absolute;
     border-top: 2.25px solid #fff;
     display: block;
     padding-top: 0.32rem;
     width: 1.5rem;
+    top: 2rem;
+    left: 20rem;
   }
-  header__home {
+  .header__nav .burger-menu {
+    height: 30rem;
+    width: 30rem;
+    background-color: red;
+  }
+  .header__nav .burger-menu-links {
+    display: block;
+  }
+  .header__nav header__home {
     height: 10rem;
     border-bottom: 3px solid #48bfe3;
     background-position: 20% 30%;
   }
-  header .header__content h1 {
+  .header__nav header .header__content h1 {
     font-size: 2rem;
   }
-  header__inner {
+  .header__nav header__inner {
     height: 10rem;
   }
-  .home-a .specials,
-  .home-b .stats,
-  .home-c .process,
-  .about-d .testimonials,
-  .contact-b .contact-info,
-  .items {
+  .header__nav .home-a .specials,
+  .header__nav .home-b .stats,
+  .header__nav .home-c .process,
+  .header__nav .about-d .testimonials,
+  .header__nav .contact-b .contact-info,
+  .header__nav .items {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .home-a .specials div {
+  .header__nav .home-a .specials div {
     border-bottom: 1px #80ffdb solid;
     padding-bottom: 1rem;
   }
-  .home-a .specials div:last-child {
+  .header__nav .home-a .specials div:last-child {
     border: none;
     padding-bottom: 0;
   }
-  .home-b .stats div {
+  .header__nav .home-b .stats div {
     padding: 2rem 0 1rem 0;
   }
-  .about-a .info {
+  .header__nav .about-a .info {
         grid-template-areas: "bioimage" "bio" "aw1" "aw2" "aw3";
   }
-  .about-c {
+  .header__nav .about-c {
     display: none;
   }
-  .contact-a .text-fields {
+  .header__nav .contact-a .text-fields {
         grid-template-areas: "name" "subject" "email" "phone" "message";
   }
-  .contact-b div {
+  .header__nav .contact-b div {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #555;
   }
-  .contact-b div:last-child {
+  .header__nav .contact-b div:last-child {
     border: none;
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  .contact-c {
+  .header__nav .contact-c {
     font-size: 2rem;
   }
-  .main-footer {
+  .header__nav .main-footer {
     height: 7rem;
   }
-  .main-footer .footer-content {
+  .header__nav .main-footer .footer-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -761,13 +777,13 @@ img {
   }
 }
 
-@media (max-height: 580px) {
+@media (max-width: 500px) and (max-height: 580px) {
   .header__home .header__content {
     padding-top: 3rem;
   }
 }
 
-@media (max-height: 330px) {
+@media (max-width: 500px) and (max-height: 330px) {
   .header__home .header__content h1 {
     font-size: 2rem;
   }
